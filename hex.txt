@@ -1,0 +1,31 @@
+;; I will eventually write another program to make this part easier.
+players
+; id | name$ | [counter values]
+1|"White"|
+2|"Black"|
+
+moves
+;id,dx,dy | move,capture | [counter values] | next moves' ids
+1, 0, 1|2,0||1,2,3
+2,-1, 1|0,2||1,2,3
+3, 1, 1|0,2||1,2,3
+4, 0,-1|2,0||4,5,6
+5,-1,-1|0,2||4,5,6
+6, 1,-1|0,2||4,5,6
+
+pieces
+;id | imgx,imgy,imgsrc | mobile,name$ | moves' ids
+1|0,0,"pawnWhite.png"|1,"White Pawn"|1,2,3
+2|0,0,"pawnBlack.png"|1,"Black Pawn"|4,5,6
+
+cells
+;id | imgx,imgy,imgsrc | northId,eastId,southId,westId | [piece id, piece imgx, piece imgy] | [player(s) id(s)]
+1| 50, 50,"cellWhite.png"|0,2,4,0|1,10,10|1
+2| 70, 50,"cellBlack.png"|0,3,5,1|1,10,10|1
+3| 90, 50,"cellWhite.png"|0,0,6,2|1,10,10|1
+4| 50, 70,"cellBlack.png"|1,5,7,0||
+5| 70, 70,"cellWhite.png"|2,6,8,4||
+6| 90, 70,"cellBlack.png"|3,0,9,5||
+7| 50, 90,"cellWhite.png"|4,8,0,0|2,10,10|2
+8| 70, 90,"cellBlack.png"|5,9,0,7|2,10,10|2
+9| 90, 90,"cellWhite.png"|6,0,0,8|2,10,10|2

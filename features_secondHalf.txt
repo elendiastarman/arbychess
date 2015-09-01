@@ -1,0 +1,76 @@
+en-passant
+ -need previous move
+  -keep track of previous moves
+  -move list
+  -board.prevMoves
+ -special move?
+ -need ability to kill on different square
+  -special function
+
+ [x] previous moves list
+ [x] selector function for special functions
+ [x] en passant function
+ [x] modify import function
+
+castling
+ -two moves
+ -special move
+  -special moves selector function
+
+ [x] both king and rook move
+ [x] undo works
+ [x] conditions implemented
+  [x] empty spaces in between
+  [x] allow for later implementation of check
+  [x] disallowed by check at beginning, middle, or end
+
+queening/promotion
+ -promotion squares
+ -pieces to promote to
+
+  piece ids | squares | options
+
+ [ ] promotion squares
+ [ ] promotable pieces
+ [ ] promotion options
+
+check (a.k.a. under attack)
+ +checkmate
+ -need to check on potential king moves
+  -check every other piece? Probably yes.
+  -use undo functionality?
+ -vulnerable pieces indicators
+ -implies requirement of "necessary conditions"
+
+ [/] check function
+  [ ] vulnerable pieces
+  [/] check enemy pieces to see if in check
+  [ ] when own piece clicked, check see if can out-of-check
+   [ ] requires rechecking enemy pieces. better way?
+
+win conditions
+ -three kinds
+  -reach a place or places on the board
+  -trap/kill a certain piece or pieces
+  -time
+ -provide ability to AND/OR each of them
+  -one win condition per line
+   -separate conditions within each are ANDed together
+    id | kind$, params | kind$, params | etc...
+   -kinds: "kill", "trap", "place", "time"
+
+ [ ] kill
+ [ ] trap
+ [ ] place
+ [ ] time
+
+
+[x] pawn double-move
+[x] en passant
+[x] castling
+[ ] promotion
+[ ] check
+[ ] checkmate
+[ ] winning
+[ ] export
+[ ] UI
